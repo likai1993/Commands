@@ -29,3 +29,9 @@ will print out the maximal value in the first column of the log.
 awk -v min=0 -F "," '{if($1<min){want=$1; min=$1}}END{print want} ' log
 ```
 will print out the minumal value.
+
+### 2. Sometime you may need to kill a set of processes in a time, you can use xargs.
+```bash
+ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
+```
+will kill all the processes that whose name contains 'nginx'.
