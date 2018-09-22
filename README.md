@@ -1,4 +1,4 @@
-# Here are some useful Shell commands. Here I take some notes just in case of oblivous. 
+# Here are some useful Shell commands. Take some notes just in case of oblivous. 
 1. For processing a log file in batching, you may need to use commands like grep, zgrep, cat, head, tail, awk.
 1.1 Accumuate a column($1 represent the first column) in a file.
 ```bash
