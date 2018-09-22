@@ -13,7 +13,7 @@ awk '{sum+};END{print sum}' log
 will only print out the final step.
 
 
-#### 1.2 Above commands all assume to divided each column by \space or \tab. You can specify it by -F:
+#### 1.2 Above commands all divide each column by \space or \tab in default. You can specify it by -F:
 ```bash
 awk -F "," '{print $1}' log 
 ```
