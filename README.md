@@ -17,7 +17,7 @@ will only print out the final step.
 ```bash
 awk -F "," '{print $1}' log 
 ```
-will divide each column by ',' and print out the first column.
+will divide each column by `,` and print out the first column.
 
 #### 1.3 Find the maximal or minumal value inside a column of a file.
 ```bash
