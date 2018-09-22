@@ -1,6 +1,5 @@
 ## Here are some useful Shell commands. Take some notes just in case of oblivious. 
-### 1. For processing a log file in batching, you may need to use commands like grep, zgrep, cat, head, tail, awk.
-
+### 1. Sometime you may need to process a file in batch and apply some mathmatic computation.
 #### 1.1 Accumuate a column($1 represents the first column) in a file.
 ```bash
 awk '{sum+=$1};{print sum}' log 
