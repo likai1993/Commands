@@ -12,8 +12,8 @@ awk '{sum+};END{print sum}' log
 ```
 will only print out the final step.
 
-Above commands all assume that each comlumn is divided by the space or tab (" ","\t").
-#### 1.2 You can specify a character to divide each column by -F:
+
+#### 1.2 Above commands all assume to divided each column by \space or \tab. You can specify it by -F:
 ```bash
 awk -F "," '{print $1}' log 
 ```
