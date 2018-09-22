@@ -5,7 +5,7 @@
 ```bash
 awk '{sum+=$1};{print sum}' log 
  ```
- will print out the 'sum' at each step.
+ will print out the `sum` at each step.
 
 ```bash
 awk '{sum+};END{print sum}' log
@@ -13,7 +13,7 @@ awk '{sum+};END{print sum}' log
 will only print out the final step.
 
 
-#### 1.2 Above commands all divide each column by \space or \tab in default. You can specify it by -F:
+#### 1.2 Above commands all divide each column by `\space` or `\tab` in default. You can specify it by `-F`:
 ```bash
 awk -F "," '{print $1}' log 
 ```
@@ -30,7 +30,7 @@ awk -v min=0 -F "," '{if($1<min){want=$1; min=$1}}END{print want} ' log
 ```
 will print out the minumal value.
 
-### 2. Sometime you may need to kill a set of processes in a time, you can use xargs.
+### 2. Sometime you may need to kill a set of processes in a time, you can use `xargs`.
 ```bash
 ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
 ```
