@@ -34,4 +34,4 @@ will print out the minumal value.
 ```bash
 ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
 ```
-will kill all the processes whose name contains 'nginx'.
+will kill all the processes whose name contains `nginx`.
