@@ -1,6 +1,6 @@
 ## Here are some useful Shell commands. Take some notes just in case of oblivious. 
-### 1. Sometime you may need to process a file in batch and apply some mathmatic computation.
-#### 1.1 Accumuate a column($1 represents the first column) in a file.
+### 1. Process a file in batch and apply some mathmatic computation.
+#### 1.1 Accumuate a column($1 represents the first column).
 ```bash
 awk '{sum+=$1};{print sum}' log 
  ```
@@ -29,7 +29,7 @@ awk -v min=0 -F "," '{if($1<min){want=$1; min=$1}}END{print want} ' log
 ```
 will print out the minimal value.
 
-### 2. Sometime you may need to kill a set of processes in a time, you can use `xargs`.
+### 2. Kill a set of processes in a time, you can use `xargs`.
 ```bash
 ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
 ```
