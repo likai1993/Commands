@@ -19,7 +19,7 @@ awk -F "," '{print $1}' log
 ```
 will divide each column by `,` and print out the first column.
 
-#### 1.3 Find the maximal or minumal value inside a column of a file.
+#### 1.3 Find the maximal or minimal value inside a column of a file.
 ```bash
 awk -v max=0 -F "," '{if($1>max){want=$1; max=$1}}END{print want} ' log
 ```
@@ -28,7 +28,7 @@ will print out the maximal value in the first column of the log.
 ```bash
 awk -v min=0 -F "," '{if($1<min){want=$1; min=$1}}END{print want} ' log
 ```
-will print out the minumal value.
+will print out the minimal value.
 
 ### 2. Sometime you may need to kill a set of processes in a time, you can use `xargs`.
 ```bash
