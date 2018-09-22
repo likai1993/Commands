@@ -20,14 +20,19 @@ will divide each column by `,` and print out the first column.
 
 #### 1.3 Find the maximal or minimal value inside a column of a file.
 ```bash
-awk -v max=0 -F "," '{if($1>max){want=$1; max=$1}}END{print want} ' log
+awk 'BEGIN{first=1;} {if (first) { max = $1; first = 0; next;} if (max < $1) max=$1;} END {print max}' log
 ```
 will print out the maximal value in the first column of the log.
 
 ```bash
-awk -v min=0 -F "," '{if($1<min){want=$1; min=$1}}END{print want} ' log
+awk 'BEGIN{first=1;} {if (first) { min = $1; first = 0; next;} if (min > $1) min=$1;} END {print min}' log
 ```
 will print out the minimal value.
+
+```bash
+awk 'BEGIN{first=1;} {if (first) { max = min = $1; first = 0; next;} if (max < $1) max=$1; if (min > $2) min=$2; } END { print min,max}' log
+```
+will print put both minimal and maximal value.
 
 ### 2. Kill a set of processes in a time, you can use `xargs`.
 ```bash
