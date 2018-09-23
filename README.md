@@ -1,5 +1,5 @@
 ## Here are some useful Shell commands. Take some notes just in case of oblivious. 
-### 1. Process a file in batch and apply some mathmatic computation.
+### 1. Process a file in batch and apply some mathematic computation.
 #### 1.1 Accumuate a column($1 represents the first column).
 ```bash
 awk '{sum+=$1};{print sum}' log 
