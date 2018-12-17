@@ -1,5 +1,5 @@
 ## Here are some great useful shell commands to conduct the statistic analysis.
-### 1. Process a file in batch and apply mathematical computation.
+### 1. Process lines of a file in batch and apply mathematical computation.
 #### 1.1 Accumuate a column($1 represents the first column).
 ```bash
 awk '{sum+=$1};{print sum}' log 
