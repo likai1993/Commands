@@ -1,4 +1,4 @@
-## Here are some useful shell commands to statistically analysis the result.
+## Here are some great useful shell commands to conduct the statistic analysis.
 ### 1. Process a file in batch and apply some mathematical computation.
 #### 1.1 Accumuate a column($1 represents the first column).
 ```bash
