@@ -1,4 +1,4 @@
-## Here are some great useful shell commands to conduct the statistic analysis.
+## Here are some great useful commands to conduct the statistic analysis.
 ### 1. Process lines of a file in batch and apply mathematical computation.
 #### 1.1 Accumuate by a column($1 represents the first column).
 ```bash
@@ -39,3 +39,8 @@ will print put both minimal and maximal value.
 ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
 ```
 will kill all the processes whose name contains `nginx`.
+
+### 3. install a python package by 'pip' to a specific python environment.
+```bash
+sudo python2.7 -m pip install pycoin
+```
