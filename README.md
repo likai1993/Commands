@@ -12,7 +12,7 @@ awk '{sum+};END{print sum}' log
 will only print out the final step.
 
 
-#### 1.2 Above commands divide each column by `\space` or `\tab` in default. You can specify it by `-F`:
+#### 1.2 Above commands divide each column by `\space` or `\tab` by default. You can customize the division character by `-F`:
 ```bash
 awk -F "," '{print $1}' log 
 ```
@@ -34,13 +34,13 @@ awk 'BEGIN{first=1;} {if (first) { max = min = $1; first = 0; next;} if (max < $
 ```
 will print put both minimal and maximal value.
 
-### 2. Kill a set of processes in a time, you can use `xargs`.
+### 2. To kill a set of processes in a time, you can use `xargs`.
 ```bash
 ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
 ```
 will kill all the processes whose name contains `nginx`.
 
-### 3. install a python package by 'pip' to a specific python environment.
+### 3. To install the python package to a specific python environment.
 ```bash
 sudo python2.7 -m pip install pycoin
 ```
