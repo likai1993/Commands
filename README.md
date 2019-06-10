@@ -40,13 +40,3 @@ ps -ef |grep 'nginx' |awk '{print $2}' |xargs kill -9
 ```
 will kill all the processes whose name contains `nginx`.
 
-### 3.1 To install the python package to a specific python environment.
-```bash
-sudo python2.7 -m pip install pycoin
-```
-### 3.2 When using 'pip' to install some python libraries, it may throw some errors like missing dependencies.
-```bash 
-sudo apt-get install python3.6-dev
-```
-can fix this kind of errors.
-
