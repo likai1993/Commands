@@ -34,7 +34,7 @@ awk 'BEGIN{first=1;} {if (first) { max = min = $1; first = 0; next;} if (max < $
 ```
 will print put both minimal and maximal value.
 
-#### 1.4 Assign an variable with the value at the first row
+#### 1.4 Assign a variable the value taken from the first row
 ```bash
 cat log |awk 'BEGIN{row=1}{if(row==1) {time=$3} printf("%0.0f\t%d\n", (($3-time)/60), ($2-$1)); row++}'
 ```
